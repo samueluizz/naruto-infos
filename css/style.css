@@ -1,0 +1,294 @@
+*{
+    margin: 0;
+    padding: 0;
+    top: auto;
+    max-height: 100vh;
+   
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Inconsolata", monospace;
+}
+
+:root{
+    --orange: #DD6C34;
+    --orange2: #E5783F;
+    --orange3: #ED5D00;
+    --yellow: #FBEA09;
+    --blue: #001551;
+    --white: #fff;
+    --black: #000;
+}
+
+@font-face {
+    font-family: 'Ninja';
+    src: url(../fonts/njnaruto.woff);
+}
+
+#app{
+    position: relative; /* Adicione essa linha */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    transition: .4s;
+}
+
+/*Header*/
+
+header{
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    padding: 2% 4%;
+}
+
+header.rolagem{
+    background-color: rgba(237, 93, 0, 0.7);
+    padding: 20px 4%;
+    transition: .4s;
+}
+
+header.rolagem a, header.rolagem i{
+    color: var(--yellow);
+    font-size: 30px;
+    transition: .4s;
+}
+
+header.rolagem img{
+    width: 150px;
+    height: auto;
+    cursor: pointer;
+    transition: .4s;
+}
+
+header img{
+    width: 220px;
+    height: auto;
+    cursor: pointer;
+    transition: .4s;
+}
+
+header ul{
+    width: 100%;
+    height: auto;
+    display: flex;
+    column-gap: 40px;
+    align-items: center;
+    justify-content: center;
+    transition: .4s;
+}
+
+header li a{
+    color: var(--orange3);
+    display: flex;
+    font-family: 'Ninja';
+    font-size: 40px;
+    text-shadow: 3px 5px 1px var(--black);
+}
+
+header li a:hover{
+    color: var(--yellow);
+    display: flex;
+    font-family: 'Ninja';
+    transform: translateY(-10px);
+    transition: .2s;
+}
+
+
+
+/*Main*/
+
+main{
+    flex-direction: column;
+    position: relative;
+    flex: 1;
+    display: block;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+    height: 100vh;
+    max-width: auto; 
+    z-index: 2;
+    transition: .4s;
+}
+
+.caixa1 {
+    background-image: url(../assets/bg4.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    transition: .4s;
+}
+
+.caixa1_conteudo{
+    padding: 64px 4%;
+    align-items: center;
+    justify-content: left;
+    flex-direction: column;
+    transition: .4s;
+}
+
+.caixa1_conteudo img{
+    display: inline-block;
+    width: 400px;
+    height: auto;
+    transition: .4s;
+}
+
+.caixa1_conteudo p{
+    max-width: 500px;
+    font-size: 22px;
+    font-weight: 700;
+    text-shadow: 1px -1px 1px var(--orange2);
+    transition: .4s;
+}
+
+
+.caixa1, .caixa2, .caixa4 {
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: left;
+    display: flex;
+    top: auto;
+    bottom: auto;
+    transition: .4s;
+}
+
+.caixa2 {
+    padding-left: 10%;
+    background-image: url(../assets/bg2.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    transition: .4s;
+}
+
+.caixa2_conteudo{
+    align-items: center;
+    justify-content: left;
+    transition: .4s;
+}
+
+.caixa2_conteudo p{
+    padding: 64px 4%;
+    color: var(--white);
+    max-width: 500px;
+    font-size: 22px;
+    font-weight: 700;
+    text-shadow: 1px 1px 1px var(--black);
+
+    text-align: center;
+    padding: 2%;
+    background-color: rgba(254, 157, 16, 0.7);
+    border-radius: 40px;
+    transition: .4s;
+}
+
+.caixa3 {
+    height: 100vh; /* Altura total da tela */
+    width: 100%; /* Largura total */
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    transition: .4s;
+
+    background-image: url(../assets/bg7.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    transition: .4s;
+}
+
+.caixa3_conteudo{
+    padding: 64px 4%;
+    align-items: center;
+    justify-content: center;
+    transition: .4s;
+    animation: appear 1.5s;
+    animation-timeline: scroll(3s);
+}
+
+.caixa3_conteudo p{
+    color: var(--blue);
+    max-width: 500px;
+    font-size: 22px;
+    font-weight: 700;
+
+    text-align: center;
+    padding: 4%;
+    background-color: rgba(254, 157, 16, 0.7);
+    border-radius: 40px;
+    transition: .4s;
+}
+
+.caixa4 {
+    display: flex;
+    justify-content: right;
+    position: relative;
+
+    background-image: url(../assets/bg1.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    transition: .4s;
+}
+
+.caixa4_conteudo img{
+    width: 500px;
+    min-width: auto;
+    height: auto;
+    transition: .4s;
+    animation: appear 1.5s;
+    animation-timeline: scroll(3s);
+}
+
+.caixa4 footer{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: space-between;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    transition: .4s;
+    animation: appear 1.5s;
+    animation-timeline: scroll(3s);
+}
+
+.caixa4 footer .lamem{
+    width: 180px;
+    height: auto;
+    max-height: 100vh;
+    transition: .4s;
+}
+
+
+.caixa4 footer .logos {
+    display: flex;
+    align-items: center;
+    transition: .4s;
+}
+
+.caixa4 footer .logos a {
+    margin-left: 10px;
+    height: auto;
+    transition: .4s;
+}
+
+.caixa4 footer .logos img {
+    max-width: 180px;
+    height: auto;
+    transition: .4s;
+}
